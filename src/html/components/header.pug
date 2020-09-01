@@ -1,0 +1,47 @@
+header.header
+    div.header-top
+        div.container.header-top__flex
+            nav.header-menu
+                a.header-menu__link(href="") Главная
+                a.header-menu__link(href="") Каталог
+                a.header-menu__link(href="") Магазины
+                a.header-menu__link(href="") Новости и акции
+                a.header-menu__link(href="") О нас
+                a.header-menu__link(href="") Вакансии
+            div.header-top__login
+                a.header-top__link(href="") Вход
+                | /
+                a.header-top__link(href="") Регистрация
+                a.header-top__login-mobile(href="")
+                    img(src="img/login.svg")
+
+    div.header-main
+        div.container.header-main__flex
+            button.header-main__menu-button Меню
+            select.header-main__location
+                option Москва
+                option Санкт-Петербург
+            div.header-main__logo
+                img(src="img/header-logo.svg")
+            div.header-main__right
+                a.header-block.header-block--cart(href="")
+                    span.header-block__count 3
+                    span.header-block__name Корзина
+                    span.header-block__info 24 568 руб.
+
+                a.header-block.header-block--favorite(href="")
+                    span.header-block__name Избранное
+                    span.header-block__info 3 товара
+
+                div.header-main__phone
+                    a.header-main__phone-link(href="tel:+7 (495) 414-11-40") +7 (495) 414-11-40
+                    span.header-main__callback Заказать звонок
+
+    div.header-bottom
+        div.container.header-bottom__flex
+            div.header-bottom__left
+                button.header-bottom__catalog-button Каталог
+            form.header-bottom__search
+                input(type="text" placeholder="Поиск по сайту")
+                button(type="submit")
+            div.header-bottom__left

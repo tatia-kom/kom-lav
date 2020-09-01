@@ -10,7 +10,206 @@ html
         // HEADER
         include ../components/header.pug
 
+        // CATALOG
 
+        section.index-catalog
+            div.container
+                h2.title Категории товаров
+                div.index-catalog__flex
+                    div.index-catalog__left
+                        // phone
+                        div.index-catalog-item.index-catalog-item--phone.index-catalog-item--left.index-catalog-item--top(style="background-image: url(img/cat-phone.png)")
+                            p.index-catalog-item__title Телефоны
+                            div.index-catalog-item__list
+                                a.index-catalog-item__link(href="") Мобильные телефоны
+                                a.index-catalog-item__link(href="") Смартфоны
+                                a.index-catalog-item__link(href="") Карманные ПК
+                                a.index-catalog-item__link(href="") Аксессуары для телефонов
+                            a.index-catalog-item__button(href="") В каталог
+                        // rest
+                        div.index-catalog-item.index-catalog-item--rest.index-catalog-item--left.index-catalog-item--top(style="background-image: url(img/cat-rest.png)")
+                            p.index-catalog-item__title Товары для отдыха
+                            div.index-catalog-item__list
+                                a.index-catalog-item__link(href="") Велосипеды
+                                a.index-catalog-item__link(href="") Самокаты
+                                a.index-catalog-item__link(href="") Тренажеры
+                                a.index-catalog-item__link(href="") Квадрокоптеры
+                                a.index-catalog-item__link(href="") Музыкальные инструменты
+                                a.index-catalog-item__link(href="") Товары для животных
+                            a.index-catalog-item__button(href="") В каталог
+                        // photo
+                        div.index-catalog-item.index-catalog-item--photo.index-catalog-item--left.index-catalog-item--top(style="background-image: url(img/cat-photo.png)")
+                            p.index-catalog-item__title Фото и Видеотехника
+                            div.index-catalog-item__list
+                                a.index-catalog-item__link(href="") Фотоаппараты
+                                a.index-catalog-item__link(href="") Карты памяти
+                                a.index-catalog-item__link(href="") Видеокамеры
+                                a.index-catalog-item__link(href="") Комплектующие
+                            a.index-catalog-item__button(href="") В каталог
+                        // avto
+                        div.index-catalog-item.index-catalog-item--left.index-catalog-item--top(style="background-image: url(img/cat-photo.png)")
+                            p.index-catalog-item__title Автоаксессуары для Авто
+                            div.index-catalog-item__list
+                                a.index-catalog-item__link(href="") Автозвук
+                                a.index-catalog-item__link(href="") Автоаксессуары
+                                a.index-catalog-item__link(href="") Видеорегистраторы
+                                a.index-catalog-item__link(href="") Навигаторы
+                                a.index-catalog-item__link(href="") Радар-детекторы
+                            a.index-catalog-item__button(href="") В каталог
+                        // jewelry
+                        div.index-catalog-item.index-catalog-item--left.index-catalog-item--top.index-catalog-item--jewelry(style="background-image: url(img/cat-jewelry.png)")
+                            p.index-catalog-item__title Золото и <br />Ювелирные <br />украшения
+                            div.index-catalog-item__list
+                                a.index-catalog-item__link(href="") Ювелирные изделия из драгоценных <br />металлов
+                                a.index-catalog-item__link(href="") Монеты и лом
+                            a.index-catalog-item__button(href="") В каталог
+
+                    div.index-catalog__right
+                        // it
+                        div.index-catalog-item.index-catalog-item--big(style="background-image: url(img/cat-it.png)")
+                            p.index-catalog-item__title Компьютерная техника
+                            div.index-catalog-item__list
+                                div.index-catalog-item__col
+                                    a.index-catalog-item__link(href="") Ноутбуки
+                                    a.index-catalog-item__link(href="") Планшетные ПК
+                                    a.index-catalog-item__link(href="") Системные блоки
+                                    a.index-catalog-item__link(href="") Мониторы
+                                div.index-catalog-item__col
+                                    a.index-catalog-item__link(href="") Комплектующие
+                            a.index-catalog-item__button(href="") В каталог
+                        div.index-catalog__right-flex
+                            // tools
+                            div.index-catalog-item.index-catalog-item--half(style="background-image: url(img/cat-tools.png)")
+                                p.index-catalog-item__title Инструменты
+                                div.index-catalog-item__list
+                                    a.index-catalog-item__link(href="") Электроинструменты
+                                    a.index-catalog-item__link(href="") Техника для сада
+                                    a.index-catalog-item__link(href="") Бензоинструменты
+                                    a.index-catalog-item__link(href="") Пневмоинструменты
+                                    a.index-catalog-item__link(href="") Сварочное оборудование
+                                a.index-catalog-item__button(href="") В каталог
+                            // home
+                            div.index-catalog-item.index-catalog-item--half(style="background-image: url(img/cat-home.png)")
+                                p.index-catalog-item__title Товары для дома
+                                div.index-catalog-item__list
+                                    a.index-catalog-item__link(href="") Мебель
+                                    a.index-catalog-item__link(href="") Кухонная техника
+                                    a.index-catalog-item__link(href="") Пылесосы
+                                    a.index-catalog-item__link(href="") Стиральные машины
+                                    a.index-catalog-item__link(href="") Утюги
+                                    a.index-catalog-item__link(href="") Холодильники
+                                    a.index-catalog-item__link(href="") Еще...
+                                a.index-catalog-item__button(href="") В каталог
+                            // audio
+                            div.index-catalog-item.index-catalog-item--half(style="background-image: url(img/cat-audio.png)")
+                                p.index-catalog-item__title Аудиотехника
+                                div.index-catalog-item__list
+                                    a.index-catalog-item__link(href="") MP3 плееры
+                                    a.index-catalog-item__link(href="") Колонки
+                                    a.index-catalog-item__link(href="") Домашние кинотеатры
+                                    a.index-catalog-item__link(href="") Музыкальные центры
+                                    a.index-catalog-item__link(href="") Ресиверы
+                                a.index-catalog-item__button(href="") В каталог
+                            // video
+                            div.index-catalog-item.index-catalog-item--half(style="background-image: url(img/cat-video.png)")
+                                p.index-catalog-item__title ТВ и Видео
+                                div.index-catalog-item__list
+                                    a.index-catalog-item__link(href="") Телевизоры
+                                    a.index-catalog-item__link(href="") Проекторы
+                                    a.index-catalog-item__link(href="") Аксессуары для ТВ
+                                a.index-catalog-item__button(href="") В каталог
+                            // children
+                            div.index-catalog-item.index-catalog-item--children.index-catalog-item--half(style="background-image: url(img/cat-children.png)")
+                                p.index-catalog-item__title Товары для детей
+                                div.index-catalog-item__list
+                                    a.index-catalog-item__link(href="") Автокресла
+                                    a.index-catalog-item__link(href="") Игрушки
+                                    a.index-catalog-item__link(href="") Коляски
+                                    a.index-catalog-item__link(href="") Радио и видеоняни
+                                a.index-catalog-item__button(href="") В каталог
+                            // games
+                            div.index-catalog-item.index-catalog-item--children.index-catalog-item--half(style="background-image: url(img/cat-games.png)")
+                                p.index-catalog-item__title Игры и приставки
+                                div.index-catalog-item__list
+                                    a.index-catalog-item__link(href="") Игровые приставки
+                                    a.index-catalog-item__link(href="") Диски
+                                    a.index-catalog-item__link(href="") Карты памяти
+                                    a.index-catalog-item__link(href="") Игровые контроллеры
+                                a.index-catalog-item__button(href="") В каталог
+                            // tech
+                            div.index-catalog-item.index-catalog-item--children.index-catalog-item--half(style="background-image: url(img/cat-tech.png)")
+                                p.index-catalog-item__title Бытовая техника
+                                div.index-catalog-item__list
+                                    a.index-catalog-item__link(href="") Телевизоры
+                                    a.index-catalog-item__link(href="") Домашняя техника
+                                    a.index-catalog-item__link(href="") Техника для кухни
+                                a.index-catalog-item__button(href="") В каталог
+                            // other
+                            div.index-catalog-item.index-catalog-item--children.index-catalog-item--half(style="background-image: url(img/cat-other.png)")
+                                p.index-catalog-item__title Личные вещи
+                                div.index-catalog-item__list
+                                    a.index-catalog-item__link(href="") Канцтовары
+                                    a.index-catalog-item__link(href="") Верхняя одежда
+                                    a.index-catalog-item__link(href="") Часы
+                                    a.index-catalog-item__link(href="") Кошельки
+                                    a.index-catalog-item__link(href="") Сумки
+                                a.index-catalog-item__button(href="") В каталог
+
+
+        // ADVANTAGES
+
+        section.advantages
+            div.container
+                h2.title Нам доверяют
+                div.advantages__flex
+                    div.advantages__item
+                        div.advantages__img
+                            img(src="img/adv1.svg")
+                        div.advantages__content
+                            p.advantages__name Широкий ассортимент продукции
+                            p.advantages__text В наших магазинах представлен отличный ассортимент различных товаров. Здесь вы найдете: сотовые телефоны, компьютеры, бытовую технику и электронику, товары для спорта, детские коляски велосипеды и многое другое.
+                    div.advantages__item
+                        div.advantages__img
+                            img(src="img/adv2.svg")
+                        div.advantages__content
+                            p.advantages__name Поможем в любое время
+                            p.advantages__text Мы работаем в режиме 24/7, поэтому наши сотрудники рады помочь вам в любое время.
+                    div.advantages__item
+                        div.advantages__img
+                            img(src="img/adv3.svg")
+                        div.advantages__content
+                            p.advantages__name Дорого покупаем
+                            p.advantages__text Мы с пониманием относимся к ситуациям наших клиентов, поэтому нам так важно, чтобы вы остались довольны профессиональной оценкой вашей вещи.
+                    div.advantages__item
+                        div.advantages__img
+                            img(src="img/adv4.svg")
+                        div.advantages__content
+                            p.advantages__name Дёшево продаём
+                            p.advantages__text Мы продаём даже совершенно новые товары без наценок и гораздо дешевле, чем обыкновенные магазины. Мы экономим ваши деньги.
+                    div.advantages__item
+                        div.advantages__img
+                            img(src="img/adv5.svg")
+                        div.advantages__content
+                            p.advantages__name Открыты к общению
+                            p.advantages__text Мы готовы рассмотреть всё, что вы принесете: от обыкновенного телевизора до спортивного инвентаря.
+                    div.advantages__item
+                        div.advantages__img
+                            img(src="img/adv6.svg")
+                        div.advantages__content
+                            p.advantages__name Работаем в рамках закона
+                            p.advantages__text Мы дорожим своей репутацией и честностью, а потому не принимаем и тем более не реализуем незаконно приобретенную продукцию.
+                    div.advantages__item
+                        div.advantages__img
+                            img(src="img/adv7.svg")
+                        div.advantages__content
+                            p.advantages__name Всё проверяем
+                            p.advantages__text Все наши товары проходят профессиональную оценку и проверку на работоспособность. Это полностью исключает возможность брака и подделки.
+                    div.advantages__item
+                        div.advantages__img
+                            img(src="img/adv8.svg")
+                        div.advantages__content
+                            p.advantages__name Доставим товар на дом
+                            p.advantages__text Наш курьер свяжется с вами и доставит заказ в удобное для вас время.
 
         // FOOTER
         include ../components/footer.pug

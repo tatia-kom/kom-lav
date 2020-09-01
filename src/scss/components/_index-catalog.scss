@@ -1,0 +1,247 @@
+.index-catalog {
+  margin-top: 60px;
+
+  @media (max-width: $xs) {
+    margin-top: 50px;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 36px;
+
+    @media (max-width: $sm) {
+      flex-direction: column;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 0;
+    }
+  }
+
+  &__left {
+    width: 40%;
+    flex-shrink: 0;
+
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    width: 60%;
+    flex-shrink: 0;
+    padding-left: 24px;
+
+    @media (max-width: $sm) {
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+
+  &__right-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.index-catalog-item {
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  padding: 24px 24px 16px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  transition: 0.3s;
+
+  @media (max-width: $lg) {
+    background-position: right -50px center;
+
+    &:hover {
+      background-position: right -100px center;
+    }
+  }
+
+  @media (max-width: $md) {
+    background-position: right -100px center;
+  }
+
+  @media (max-width: $sm) {
+    background-position: right 6px center;
+  }
+
+  @media (max-width: $xs) {
+    background-position: right -100px center;
+  }
+
+  &--phone {
+    min-height: 444px;
+    padding-bottom: 60px;
+  }
+
+  &--rest {
+    min-height: 470px;
+    padding-bottom: 60px;
+  }
+
+  &--photo {
+    min-height: 344px;
+  }
+
+  &--jewelry {
+    @media (max-width: $xs) {
+      background-position: right -150px center;
+    }
+  }
+
+  &--children {
+    min-height: 472px;
+
+    @media (max-width: $md) {
+      min-height: 466px;
+    }
+
+    @media (max-width: $sm) {
+      min-height: 0;
+    }
+  }
+
+
+
+
+  &--left {
+    .index-catalog-item__button {
+      align-self: flex-start;
+    }
+  }
+
+  &--top {
+    .index-catalog-item__list {
+      margin-bottom: auto;
+    }
+  }
+
+  &--big {
+    position: relative;
+
+    .index-catalog-item__title {
+      margin-bottom: 20px;
+
+      @media (max-width: $sm) {
+        margin-bottom: 24px;
+      }
+    }
+    .index-catalog-item__list {
+      flex-direction: row;
+
+      @media (max-width: $sm) {
+        flex-direction: column;
+
+        .index-catalog-item__col:last-child {
+          margin-top: 16px;
+        }
+      }
+    }
+    .index-catalog-item__button {
+      position: absolute;
+      bottom: 16px;
+
+      @media (max-width: $sm) {
+        position: relative;
+        bottom: auto;
+      }
+    }
+  }
+
+  &--half {
+    width: calc(50% - 12px);
+    margin-right: 24px;
+    flex-shrink: 0;
+
+    @media (max-width: $sm) {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: black;
+    margin-bottom: 24px;
+
+    @media (max-width: $md) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 54px;
+  }
+
+  &__link {
+    display: block;
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 21px;
+    color: $grey;
+
+    &:hover {
+      color: black;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__button {
+    margin-top: 24px;
+    align-self: center;
+    width: 270px;
+    height: 60px;
+    background: $borderColor;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+
+    @media (max-width: $md) {
+      width: 180px;
+      height: 50px;
+      font-size: 16px;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+
+    &:hover {
+      background: $primary;
+    }
+  }
+}
