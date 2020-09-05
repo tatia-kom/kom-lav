@@ -52,6 +52,12 @@
     .header-main {
       padding: 0;
 
+      &__menu-button {
+      	@media (max-width: $xs) {
+      		margin: 24px 0;
+      	}
+      }
+
       &__flex {
         height: 74px;
 
@@ -238,7 +244,7 @@
     padding-right: 26px;
 
     @media (max-width: $xs) {
-      margin: 24px 0;
+      margin: 31px 0;
     }
 
     &--active {
@@ -307,6 +313,7 @@
       left: auto;
       right: 0;
       top: 10px;
+      width: 240px;
     }
 
     img {
