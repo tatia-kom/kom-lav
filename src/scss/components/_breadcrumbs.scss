@@ -1,0 +1,45 @@
+.breadcrumbs {
+  padding: 11px 0 22px;
+
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 16px;
+    color: #505050;
+    margin-right: 14px;
+    margin-top: 11px;
+    position: relative;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: $primary;
+      border-radius: 50%;
+      left: calc(100% + 4px);
+      top: 5px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      &:hover {
+        color: #505050;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

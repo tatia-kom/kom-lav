@@ -1,0 +1,423 @@
+doctype html
+html
+    head
+        meta(http-equiv="text/html" charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Категория товаров | Комиссионная лавка
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+    body
+        // HEADER
+        include ../components/header.pug
+
+        // BREADCRUMBS
+        section.breadcrumbs
+            div.container
+                div.breadcrumbs__flex
+                    a.breadcrumbs__item(href="") Главная
+                    a.breadcrumbs__item(href="") Каталог товаров
+                    a.breadcrumbs__item(href="") Телефоны
+                    span.breadcrumbs__item Сотовые телефоны
+
+        div.container
+            h1.title Сотовые телефоны
+
+            div.category
+                div.category-filter
+                    div.category-filter__title Параметры
+
+                    div.category-filter__content
+                        div.category-filter-block.category-filter-block--opened
+                            div.category-filter-block__top
+                                p.category-filter-block__name Цена
+                                span.category-filter-block__clear Сбросить
+                            div.category-filter-block__content
+                                div.category-filter-block__flex
+                                    div.category-filter-block__from-to
+                                        label От
+                                        input#priceFrom(type="text" value="500")
+                                    div.category-filter-block__from-to
+                                        label До
+                                        input#priceTo(type="text" value="15000")
+                                div.category-filter-block__range#priceRange(data-min="0" data-max="15000")
+
+                        div.category-filter-block.category-filter-block--opened
+                            div.category-filter-block__top
+                                p.category-filter-block__name Производитель
+                                span.category-filter-block__clear Сбросить
+                            div.category-filter-block__content
+                                div.category-checkbox
+                                    input.category-checkbox__input#prod1(type="checkbox" checked)
+                                    label.category-checkbox__label(for="prod1") Apple <span class="category-checkbox__count">9866</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#prod2(type="checkbox")
+                                    label.category-checkbox__label(for="prod2") Samsung <span class="category-checkbox__count">245</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#prod3(type="checkbox")
+                                    label.category-checkbox__label(for="prod3") Honor <span class="category-checkbox__count">111</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#prod4(type="checkbox")
+                                    label.category-checkbox__label(for="prod4") Xiaomi <span class="category-checkbox__count">6585</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#prod5(type="checkbox")
+                                    label.category-checkbox__label(for="prod5") Huawei <span class="category-checkbox__count">2523</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#prod6(type="checkbox")
+                                    label.category-checkbox__label(for="prod6") 1plus <span class="category-checkbox__count">2</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#prod7(type="checkbox")
+                                    label.category-checkbox__label(for="prod7") 3Q <span class="category-checkbox__count">2523</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#prod8(type="checkbox")
+                                    label.category-checkbox__label(for="prod8") 4Good <span class="category-checkbox__count">64</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#prod9(type="checkbox")
+                                    label.category-checkbox__label(for="prod9") AGM <span class="category-checkbox__count">1</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#prod10(type="checkbox")
+                                    label.category-checkbox__label(for="prod10") Asus <span class="category-checkbox__count">245</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#prod11(type="checkbox")
+                                    label.category-checkbox__label(for="prod11") Aceline <span class="category-checkbox__count">454</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#prod12(type="checkbox")
+                                    label.category-checkbox__label(for="prod12") Acer <span class="category-checkbox__count">6533</span>
+
+                        div.category-filter-block.category-filter-block--opened
+                            div.category-filter-block__top
+                                p.category-filter-block__name Размер экрана
+                                span.category-filter-block__clear Сбросить
+                            div.category-filter-block__content
+                                div.category-filter-block__flex
+                                    div.category-filter-block__from-to
+                                        label От
+                                        input#displayFrom(type="text" value="1")
+                                    div.category-filter-block__from-to
+                                        label До
+                                        input#displayTo(type="text" value="7")
+                                div.category-filter-block__range#displayRange(data-min="1" data-max="32")
+
+                        div.category-filter-block.category-filter-block--opened
+                            div.category-filter-block__top
+                                p.category-filter-block__name Кол-во SIM-карт
+                                span.category-filter-block__clear Сбросить
+                            div.category-filter-block__content
+                                div.category-checkbox
+                                    input.category-checkbox__input#sim1(type="checkbox")
+                                    label.category-checkbox__label(for="sim1") 1 <span class="category-checkbox__count">9866</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#sim2(type="checkbox" checked)
+                                    label.category-checkbox__label(for="sim2") 2 <span class="category-checkbox__count">245</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#sim3(type="checkbox")
+                                    label.category-checkbox__label(for="sim3") 3 <span class="category-checkbox__count">111</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#sim4(type="checkbox")
+                                    label.category-checkbox__label(for="sim4") 4 <span class="category-checkbox__count">6585</span>
+
+                        div.category-filter-block.category-filter-block--opened
+                            div.category-filter-block__top
+                                p.category-filter-block__name Обьем памяти
+                                span.category-filter-block__clear Сбросить
+                            div.category-filter-block__content
+                                div.category-checkbox
+                                    input.category-checkbox__input#mem1(type="checkbox")
+                                    label.category-checkbox__label(for="mem1") 256 <span class="category-checkbox__count">9866</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#mem2(type="checkbox" checked)
+                                    label.category-checkbox__label(for="mem2") 128 <span class="category-checkbox__count">245</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#mem3(type="checkbox")
+                                    label.category-checkbox__label(for="mem3") 64 <span class="category-checkbox__count">111</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#mem4(type="checkbox")
+                                    label.category-checkbox__label(for="mem4") 32 <span class="category-checkbox__count">6585</span>
+
+                                span.category-filter-block__more Показать все
+
+                                div.category-checkbox.category-checkbox--hidden
+                                    input.category-checkbox__input#mem5(type="checkbox")
+                                    label.category-checkbox__label(for="mem5") 16 <span class="category-checkbox__count">6585</span>
+                                div.category-checkbox.category-checkbox--hidden
+                                    input.category-checkbox__input#mem6(type="checkbox")
+                                    label.category-checkbox__label(for="mem6") 8 <span class="category-checkbox__count">6585</span>
+                                div.category-checkbox.category-checkbox--hidden
+                                    input.category-checkbox__input#mem7(type="checkbox")
+                                    label.category-checkbox__label(for="mem7") 4 <span class="category-checkbox__count">6585</span>
+
+                        div.category-filter-block.category-filter-block--opened
+                            div.category-filter-block__top
+                                p.category-filter-block__name Цвет
+                                span.category-filter-block__clear Сбросить
+                            div.category-filter-block__content
+                                div.category-filter-block__colors
+                                    span.category-filter-block__color(style="background: #795D52")
+                                    span.category-filter-block__color(style="background: #FF8A00")
+                                    span.category-filter-block__color.category-filter-block__color--selected(style="background: #E40229")
+                                    span.category-filter-block__color(style="background: #FEECEC")
+                                    span.category-filter-block__color(style="background: #FFF")
+                                    span.category-filter-block__color(style="background: #545353")
+                                    span.category-filter-block__color(style="background: #FF5C00")
+                                    span.category-filter-block__color(style="background: #004CFF")
+
+                        div.category-filter-block.category-filter-block--opened
+                            div.category-filter-block__top
+                                p.category-filter-block__name Обьем оперативной <br />памяти
+                                span.category-filter-block__clear Сбросить
+                            div.category-filter-block__content
+                                div.category-checkbox
+                                    input.category-checkbox__input#ram1(type="checkbox")
+                                    label.category-checkbox__label(for="ram1") 1 <span class="category-checkbox__count">9866</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#ram2(type="checkbox" checked)
+                                    label.category-checkbox__label(for="ram2") 2 <span class="category-checkbox__count">245</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#ram3(type="checkbox")
+                                    label.category-checkbox__label(for="ram3") 3 <span class="category-checkbox__count">111</span>
+                                div.category-checkbox
+                                    input.category-checkbox__input#ram4(type="checkbox")
+                                    label.category-checkbox__label(for="ram4") 4 <span class="category-checkbox__count">6585</span>
+
+                                span.category-filter-block__more Показать все
+
+                                div.category-checkbox.category-checkbox--hidden
+                                    input.category-checkbox__input#ram5(type="checkbox")
+                                    label.category-checkbox__label(for="ram5") 5 <span class="category-checkbox__count">6585</span>
+                                div.category-checkbox.category-checkbox--hidden
+                                    input.category-checkbox__input#ram6(type="checkbox")
+                                    label.category-checkbox__label(for="ram6") 6 <span class="category-checkbox__count">6585</span>
+                                div.category-checkbox.category-checkbox--hidden
+                                    input.category-checkbox__input#ram7(type="checkbox")
+                                    label.category-checkbox__label(for="ram7") 7 <span class="category-checkbox__count">6585</span>
+
+                        button.category-filter__button#clearLeftFilter Сбросить все
+
+
+
+                div.category__content
+                    div.category-top
+                        form.category-top__search
+                            input(type="text" placeholder="Введите название или артикул")
+                            button(type="submit")
+
+                        div.category-top-sorting
+                            span.category-top-sorting__label Сортировать по:
+                            // Добавьте класс "category-top-sorting__item--active" для активного элемента и класс "category-top-sorting__item--down" или "category-top-sorting__item--up" для соответствующей стрелочки
+                            span.category-top-sorting__item Популярности
+                            span.category-top-sorting__item.category-top-sorting__item--active.category-top-sorting__item--down Цене
+                            span.category-top-sorting__item Обновлению
+
+                        button.category-top__clear Сбросить все
+
+                    div.category__items
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                                    span.category-item__label Выгода сейчас
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                                    span.category-item__label Выгода сейчас
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                                    span.category-item__label Выгода сейчас
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                                    span.category-item__label Выгода сейчас
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                                    span.category-item__label Выгода сейчас
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                                    span.category-item__label Выгода сейчас
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+                        a.category-item(href="")
+                            div.category-item__img-wrap
+                                div.category-item__img
+                                    img(src="img/img.jpg")
+                            div.category-item__content
+                                p.category-item__name Apple iPhone 11 64GB
+                                p.category-item__city Москва
+                                div.category-item__bottom
+                                    span.category-item__more Подробнее
+                                    div.category-item__price 82 840 ₽
+                                        span.category-item__old 93 970 ₽
+
+                    include ../components/pagination.pug
+
+                    div.category__shops-title Сеть комиссионных магазинов «Комиссионная лавка»
+                    div.category__shops-list
+                        a.category__shops-link.category__shops-link--active(href="") Все города
+                        a.category__shops-link(href="") Москва и область
+                        a.category__shops-link(href="") Санкт-Петербург
+                        a.category__shops-link(href="") Екатеринбург
+                        a.category__shops-link(href="") Казань
+                        a.category__shops-link(href="") Кострома
+                        a.category__shops-link(href="") Копейск
+                        a.category__shops-link(href="") Краснодар
+                        a.category__shops-link(href="") Красноярск
+                        a.category__shops-link(href="") Курган
+                        a.category__shops-link(href="") Магнитогорск
+                        a.category__shops-link(href="") Набережные Челны
+                        a.category__shops-link(href="") Нижнекамск
+                        a.category__shops-link(href="") Нижний Новгород
+                        a.category__shops-link(href="") Новокуйбышевск
+                        a.category__shops-link(href="") Пенза
+                        a.category__shops-link(href="") Пермь
+                        a.category__shops-link(href="") Рязань
+                        a.category__shops-link(href="") Самара
+                        a.category__shops-link(href="") Саратов
+                        a.category__shops-link(href="") Симферополь
+                        a.category__shops-link(href="") Сызрань
+                        a.category__shops-link(href="") Тольятти
+                        a.category__shops-link(href="") Тюмень
+                        a.category__shops-link(href="") Уфа
+                        a.category__shops-link(href="") Чапаевск
+                        a.category__shops-link(href="") Челябинск
+                        a.category__shops-link(href="") Энгельс
+
+
+        // FOOTER
+        include ../components/footer.pug
+
+        // SCRIPTS
+        include ../components/scripts.pug

@@ -1,0 +1,65 @@
+.pagination {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $xs) {
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    color: #000000;
+    margin: 0 10px;
+
+    @media (max-width: $xs) {
+      margin: 5px 10px;
+    }
+
+    &--active {
+      color: $primary;
+      font-weight: bold;
+    }
+
+    &--prev {
+      letter-spacing: 0;
+      font-weight: bold;
+      position: relative;
+      padding-left: 30px;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 18px;
+        height: 18px;
+        background: url('../img/pagination-arrow.svg');
+      }
+    }
+
+    &--next {
+      letter-spacing: 0;
+      font-weight: bold;
+      position: relative;
+      padding-right: 30px;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 2px;
+        width: 18px;
+        height: 18px;
+        background: url('../img/pagination-arrow.svg');
+        transform: scale(-1,1);
+      }
+    }
+  }
+}

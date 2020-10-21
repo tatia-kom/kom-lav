@@ -35,7 +35,7 @@ function htmlBuild() {
 }
 
 function jsBuild() {
-	return gulp.src(['src/js/scripts.js'])
+	return gulp.src(['src/js/jquery-ui.min.js', 'src/js/jquery-ui-touch.js', 'src/js/scripts.js'])
         .pipe(concat('all-scripts.js'))
            .pipe(gulp.dest('build/js/'));
 }

@@ -1,0 +1,63 @@
+.category-checkbox {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+  transition: 0.3s;
+
+  &--hidden {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+
+    &:checked {
+      & + .category-checkbox__label {
+        color: black;
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 19px;
+    color: #707070;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    padding-left: 26px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #E5E5E5;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border: 1px solid $primary;
+      opacity: 0;
+      background: $primary url('../img/checkbox.svg') no-repeat top 3px left 2px;
+    }
+  }
+}
