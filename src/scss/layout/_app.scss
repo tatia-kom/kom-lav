@@ -99,4 +99,16 @@ footer {
     @media (max-width: $xs) {
         font-size: 24px;
     }
+
+    &--left {
+        text-align: left;
+    }
+
+    &--top40 {
+        margin-top: 40px;
+
+        @media (max-width: $xs) {
+            margin-top: 20px;
+        }
+    }
 }

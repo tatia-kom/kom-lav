@@ -116,5 +116,13 @@ $(document).ready(function() {
         $('.category-filter-block__color--selected').removeClass('category-filter-block__color--selected');
     });
 
+
+    // item
+
+    $('.item-block__characters-more').click(function(e) {
+        e.preventDefault();
+        $(this).hide();
+        $('.item-block__characters-item--hidden').removeClass('item-block__characters-item--hidden');
+    });
 });
 
