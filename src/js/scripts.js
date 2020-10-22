@@ -145,5 +145,84 @@ $(document).ready(function() {
         , showMaskOnHover: false
         , showMaskOnFocus: true
     });
+
+    ymaps.ready(init);
 });
+
+function init() {
+
+
+    var myMap = new ymaps.Map("map", {
+        center: [55.755814, 37.617635]
+        , zoom: 10
+        , controls: ['zoomControl']
+    });
+
+
+    myMap.behaviors.disable('multiTouch');
+    myMap.behaviors.disable('scrollZoom');
+    var myGeoObjects = [];
+    var flag_for_center = false;
+
+
+
+    $(".shops-item").each(function (e) {
+        var latt = $(this).attr("data-lat");
+        var longg = $(this).attr("data-lon");
+        if (flag_for_center) {
+            myMap.setCenter([latt, longg], 16, {
+                checkZoomRange: false
+            });
+            flag_for_center = false;
+        }
+        myGeoObjects[e] = new ymaps.Placemark([latt, longg], {
+            clusterCaption: 'Заголовок'
+        }, /*{
+            iconLayout: 'default#image'
+            , iconImageHref: '/img/mark-map.png'
+            , iconImageSize: [113, 122]
+            , iconImageOffset: [-53.5, -85]
+        }*/);
+    });
+
+
+    var clusterIcons = [{
+        href: 'img/marker-1.png'
+        , size: [76, 70]
+        , offset: [0, 0]
+    }];
+
+
+    var clusterer = new ymaps.Clusterer({
+        clusterDisableClickZoom: false
+        , clusterOpenBalloonOnClick: false
+        , clusterBalloonPanelMaxMapArea: 0
+        , clusterBalloonContentLayoutWidth: 300
+        , clusterBalloonContentLayoutHeight: 200
+        , clusterBalloonPagerSize: 2
+        , clusterBalloonPagerVisible: false
+    });
+
+
+    clusterer.add(myGeoObjects);
+    myMap.geoObjects.add(clusterer);
+
+
+    $('.shops-item').click(function(){
+        $('.shops-item--active').removeClass('shops-item--active');
+        $(this).addClass('shops-item--active');
+        myMap.setCenter(
+            [parseFloat($(this).attr("data-lat"))
+                , parseFloat($(this).attr("data-lon"))], 16, {
+                checkZoomRange: false
+            });
+
+        if ($(window).width() < 992) {
+            $("html, body").animate({scrollTop: "200px"});
+        }
+    });
+
+
+
+}
 

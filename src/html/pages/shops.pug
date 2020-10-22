@@ -1,0 +1,53 @@
+doctype html
+html
+    head
+        meta(http-equiv="text/html" charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Магазины | Комиссионная лавка
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+    body
+        // HEADER
+        include ../components/header.pug
+
+        // BREADCRUMBS
+        section.breadcrumbs
+            div.container
+                div.breadcrumbs__flex
+                    a.breadcrumbs__item(href="") Главная
+                    span.breadcrumbs__item Магазины
+
+        div.container
+            h1.title.title--left.title--top40 Адреса магазинов в Москве и области
+
+            div.shops
+                div.shops__list
+                    div.shops-item(data-lat="55.798500" data-lon="37.934947")
+                        p.shops-item__place Московская обл., город Балашиха
+                        p.shops-item__address Московская обл., г. Балашиха, Советская улица, 8
+                        p.shops-item__phone 8 (495) 524-24-58
+                    div.shops-item(data-lat="55.798525" data-lon="37.934076")
+                        p.shops-item__place Московская обл., город Балашиха
+                        p.shops-item__address Московская обл., г. Балашиха, Советская улица, 9
+                        p.shops-item__phone 8 (495) 524-24-58
+                    div.shops-item(data-lat="56.011696" data-lon="37.478522")
+                        p.shops-item__place Московская обл., город Лобня
+                        p.shops-item__address Московская обл г.Лобня, улица Ленина, 19к1
+                        p.shops-item__phone 8 (495) 524-24-58
+                    div.shops-item(data-lat="55.678042" data-lon="37.891837")
+                        p.shops-item__place Московская обл., город Люберцы
+                        p.shops-item__address Московская обл г.Люберцы, Смирновская улица, 5
+                        p.shops-item__phone 8 (495) 524-24-58
+                    div.shops-item(data-lat="56.011837" data-lon="37.474704")
+                        p.shops-item__place Московская обл., город Лобня
+                        p.shops-item__address Московская обл г.Лобня, улица Ленина, 20
+                        p.shops-item__phone 8 (495) 524-24-58
+
+                div.shops__map#map
+                    p.shops__note Мы работаем круглосуточно!
+
+        // FOOTER
+        include ../components/footer.pug
+
+        // SCRIPTS
+        include ../components/scripts.pug
