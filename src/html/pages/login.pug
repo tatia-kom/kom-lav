@@ -1,0 +1,51 @@
+doctype html
+html
+    head
+        meta(http-equiv="text/html" charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Вход | Комиссионная лавка
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+    body
+        // HEADER
+        include ../components/header.pug
+
+        // BREADCRUMBS
+        section.breadcrumbs
+            div.container
+                div.breadcrumbs__flex
+                    a.breadcrumbs__item(href="") Главная
+                    span.breadcrumbs__item Вход
+
+
+        section.login
+            div.login__block
+                div.login__logo
+                    img(src="img/header-logo.svg")
+                p.login__title Вход в личный кабинет
+                p.login__text Пожалуйста, войдите в аккаунт для заказа товаров из других городов.
+                div.login__input-wrap
+                    input.login__input.tel-input(type="text" placeholder="Телефон")
+                div.login__input-wrap
+                    input.login__input(type="password" placeholder="Пароль")
+                    button.login__password-show
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                            <path d="M7.99822 5.81821C6.79457 5.81821 5.81641 6.79637 5.81641 8.00002C5.81641 9.20366 6.79457 10.1818 7.99822 10.1818C9.20186 10.1818 10.18 9.20366 10.18 8.00002C10.18 6.79637 9.20183 5.81821 7.99822 5.81821Z" fill="#979797"/>
+                            <path d="M8.00002 2.54547C4.36364 2.54547 1.25819 4.80727 0 8.00002C1.25819 11.1927 4.36364 13.4546 8.00002 13.4546C11.64 13.4546 14.7418 11.1927 16 8.00002C14.7418 4.80727 11.64 2.54547 8.00002 2.54547ZM8.00002 11.6364C5.99274 11.6364 4.36364 10.0073 4.36364 7.99999C4.36364 5.99271 5.99274 4.36364 8.00002 4.36364C10.0073 4.36364 11.6364 5.99275 11.6364 8.00002C11.6364 10.0073 10.0073 11.6364 8.00002 11.6364Z" fill="#979797"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0">
+                            <rect width="16" height="16" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                a.login__link(href="") Восстановить пароль
+                button.login__button Войти
+                button.login__button.login__button--grey Зарегистрироваться
+
+        // FOOTER
+        include ../components/footer.pug
+
+        // SCRIPTS
+        include ../components/scripts.pug

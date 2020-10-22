@@ -1,0 +1,152 @@
+.login {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $xs) {
+    margin-top: 10px;
+  }
+
+  &__block {
+    width: 450px;
+    flex-shrink: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 32px 24px 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media (max-width: $xs) {
+      width: calc(100% - 40px);
+      max-width: 450px;
+      padding: 24px 16px;
+    }
+  }
+
+  &__logo {
+    width: 272px;
+
+    @media (max-width: $xs) {
+      max-width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: black;
+    text-align: center;
+  }
+
+  &__text {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
+    color: black;
+    margin-bottom: 13px;
+  }
+
+  &__input-wrap {
+    margin-top: 24px;
+    width: 100%;
+    height: 46px;
+    background: #F2F2F2;
+    border-radius: 30px;
+    padding-right: 55px;
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0 24px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+    background: transparent;
+
+    @include placeholderColor(black);
+  }
+
+  &__password-show {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+
+    &--active {
+      svg {
+        path {
+          fill: black;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    align-self: flex-start;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #979797;
+
+    &--center {
+      align-self: center;
+    }
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  &__note {
+    margin-top: 16px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #979797;
+
+    a {
+      color: #EB5757;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 16px;
+    width: 100%;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+    background: $primary;
+    cursor: pointer;
+
+    &--grey {
+      background: #BDBDBD;
+    }
+
+    &:hover {
+      background: black;
+    }
+  }
+}

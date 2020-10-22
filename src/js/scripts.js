@@ -124,5 +124,26 @@ $(document).ready(function() {
         $(this).hide();
         $('.item-block__characters-item--hidden').removeClass('item-block__characters-item--hidden');
     });
+
+    // login
+
+    $('.login__password-show').click(function(e) {
+        e.preventDefault();
+        if ($(this).hasClass('login__password-show--active')) {
+            $(this).removeClass('login__password-show--active');
+            $(this).parent().find('input').attr('type', 'password');
+        }
+        else {
+            $(this).addClass('login__password-show--active');
+            $(this).parent().find('input').attr('type', 'text');
+        }
+    });
+
+    $('.tel-input').inputmask({
+        "mask": "+7 (999) 999-99-99"
+        , "placeholder": "_"
+        , showMaskOnHover: false
+        , showMaskOnFocus: true
+    });
 });
 

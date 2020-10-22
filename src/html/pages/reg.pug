@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        meta(http-equiv="text/html" charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Регистрация | Комиссионная лавка
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+    body
+        // HEADER
+        include ../components/header.pug
+
+        // BREADCRUMBS
+        section.breadcrumbs
+            div.container
+                div.breadcrumbs__flex
+                    a.breadcrumbs__item(href="") Главная
+                    span.breadcrumbs__item Регистрация
+
+
+        section.login
+            div.login__block
+                div.login__logo
+                    img(src="img/header-logo.svg")
+                p.login__title Регистрация по телефону
+                p.login__text На указанный номер будет отправлен пароль для входа
+                div.login__input-wrap
+                    input.login__input(type="text" placeholder="Имя")
+                div.login__input-wrap
+                    input.login__input.tel-input(type="text" placeholder="Телефон")
+                p.login__note Отправляя форму, вы соглашаетесь с <a href="">условиями обработки и хранения персональных данных</a>
+                button.login__button Далее
+
+        // FOOTER
+        include ../components/footer.pug
+
+        // SCRIPTS
+        include ../components/scripts.pug
