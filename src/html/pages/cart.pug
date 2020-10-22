@@ -1,0 +1,57 @@
+doctype html
+html
+    head
+        meta(http-equiv="text/html" charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Корзина | Комиссионная лавка
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+    body
+        // HEADER
+        include ../components/header.pug
+
+        // BREADCRUMBS
+        section.breadcrumbs
+            div.container
+                div.breadcrumbs__flex
+                    a.breadcrumbs__item(href="") Главная
+                    span.breadcrumbs__item Корзина
+
+        div.container
+            h1.title.title--left.title--top40 Товары в корзине
+
+            div.cart
+                div.cart__items
+                    // ITEM
+                    div.cart-item
+                        div.cart-item__photo
+                            img(src="img/img.jpg")
+                        div.cart-item__content
+                            div.cart-item__info
+                                p.cart-item__name Товар
+                                p.cart-item__location Сызрань, проспект 50 лет Октября, 54 (со двора)
+                                a.cart-item__note(href="") Пожелание к видеообзору
+                            button.cart-item__delete Удалить
+                            p.cart-item__price 12 840.50 ₽
+
+                div.cart__right
+                    p.cart__title Оформление заказа
+                    p.cart__text Оплата заказа производится только после получения видеообзора и принятия окончательного решения о покупке.
+
+                    div.cart__goods
+                        span.cart__name Товары:
+                        span.cart__price 12 840.50 ₽
+
+                    div.cart__all
+                        span.cart__all-label Итого:
+                        span.cart__all-sum 12 840.50 ₽
+
+                    p.cart__text.cart__text--black Онлайн подтверждение заявки за 2 минуты. Вы можете выбрать срок кредитования и ежемесячный платеж самостоятельно
+                    button.cart__button Оформить заказ
+                    button.cart__button.cart__button--grey Хочу в кредит
+
+        // FOOTER
+        include ../components/footer.pug
+
+        // SCRIPTS
+        include ../components/scripts.pug

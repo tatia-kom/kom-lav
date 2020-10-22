@@ -630,7 +630,7 @@
       }
 
       &:nth-child(3n+3) {
-        @media (min-width: 992px) {
+        @media (min-width: 992px) and (max-width: $md) {
           margin-right: 0;
         }
       }
@@ -641,7 +641,7 @@
       }
 
       &:nth-child(even) {
-        @media (min-width: 768px) {
+        @media (min-width: 768px) and (max-width: $sm) {
           margin-right: 0;
         }
       }

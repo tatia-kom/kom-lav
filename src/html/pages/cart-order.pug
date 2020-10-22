@@ -1,0 +1,54 @@
+doctype html
+html
+    head
+        meta(http-equiv="text/html" charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Корзина - оформление | Комиссионная лавка
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+    body
+        // HEADER
+        include ../components/header.pug
+
+        // BREADCRUMBS
+        section.breadcrumbs
+            div.container
+                div.breadcrumbs__flex
+                    a.breadcrumbs__item(href="") Главная
+                    span.breadcrumbs__item Корзина
+
+        div.container
+            h1.title.title--left.title--top40 Оформление заказа
+
+            div.cart
+                div.cart__content
+                    p.cart__title Данные получателя
+                    div.cart__flex
+                        input.cart__input(type="text" placeholder="Фамилия")
+                        input.cart__input(type="text" placeholder="Имя")
+                        input.cart__input(type="text" placeholder="Отчество")
+                        input.cart__input.tel-input(type="text" placeholder="Телефон")
+                        input.cart__input(type="text" placeholder="E-mail")
+                    p.cart__title Город получения
+                    input.cart__input(type="text" placeholder="Напишите город получения")
+
+                div.cart__right
+                    p.cart__title Оформление заказа
+                    p.cart__text Оплата заказа производится только после получения видеообзора и принятия окончательного решения о покупке.
+
+                    div.cart__goods
+                        span.cart__name Товары:
+                        span.cart__price 12 840.50 ₽
+
+                    div.cart__all
+                        span.cart__all-label Итого:
+                        span.cart__all-sum 12 840.50 ₽
+
+                    p.cart__text.cart__text--black Онлайн подтверждение заявки за 2 минуты. Вы можете выбрать срок кредитования и ежемесячный платеж самостоятельно
+                    button.cart__button Оформить заказ
+
+        // FOOTER
+        include ../components/footer.pug
+
+        // SCRIPTS
+        include ../components/scripts.pug

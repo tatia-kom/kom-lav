@@ -146,7 +146,17 @@ $(document).ready(function() {
         , showMaskOnFocus: true
     });
 
+    // map
+
     ymaps.ready(init);
+
+    // lk
+
+    $('.lk-menu__item--profile').click(function(e) {
+        if ($(window).width() < 768) {
+            $('.lk-menu__links').slideToggle();
+        }
+    });
 });
 
 function init() {
