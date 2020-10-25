@@ -15,6 +15,29 @@ $(document).ready(function() {
         $('.header-top').toggleClass('header-top--active');
     });
 
+    // header catalog
+    $('.header-catalog__category').mouseover(function(e) {
+        $('.header-catalog__item--active').removeClass('header-catalog__item--active');
+        $(this).parent().addClass('header-catalog__item--active');
+    });
+    $('.header-catalog__category').click(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.header-catalog__item--active').removeClass('header-catalog__item--active');
+        $(this).parent().addClass('header-catalog__item--active');
+    });
+
+    $('.header-bottom__catalog-button').click(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.header-catalog').slideToggle();
+    });
+
+    $('body').click(function(e) {
+        $('.header-catalog__item--active').removeClass('header-catalog__item--active');
+        $('.header-catalog').slideUp();
+    });
+
     // price range
 
     $('#priceRange').slider({
