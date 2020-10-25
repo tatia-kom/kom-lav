@@ -1,0 +1,116 @@
+doctype html
+html
+    head
+        meta(http-equiv="text/html" charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Заявка на оценку | Комиссионная лавка
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+    body
+        // HEADER
+        include ../components/header.pug
+
+        // BREADCRUMBS
+        section.breadcrumbs
+            div.container
+                div.breadcrumbs__flex
+                    a.breadcrumbs__item(href="") Главная
+                    span.breadcrumbs__item Заявка на оценку
+
+        div.container
+            h1.title.title--left.title--top40 Заявка на оценку
+
+            div.request
+                div.request__block.request__block--top24
+                    p.request__title Ваши данные
+
+                    div.request__flex
+                        input.request__input.tel-input(type="text" placeholder="Телефон")
+                        input.request__input(type="text" placeholder="Ваше имя")
+
+                    p.request__title Ваш город
+                    input.request__input(type="text" placeholder="Напишите город")
+
+                p.request__title.request__title--big Данные о товаре
+
+                div.request__block
+                    p.request__title Что оценить
+
+                    input.request__input.request__input--grey(type="text" placeholder="Бренд,  марка, модель")
+                    input.request__input.request__input--grey(type="text" placeholder="Желаемая стоимость, руб.₽")
+                    textarea.request__textarea(placeholder="Описание товара")
+
+                    div.request__flex
+                        div.request__photo
+                            input(type="file")
+
+                            <svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                            <path d="M19.8058 14.1716C21.381 15.7338 21.381 18.2665 19.8058 19.8286C18.2305 21.3908 15.6766 21.3908 14.1014 19.8286C12.5261 18.2665 12.5261 15.7338 14.1014 14.1716C15.6766 12.6095 18.2305 12.6095 19.8058 14.1716Z" fill="#979797"/>
+                            <path d="M29.0549 5.9999H26.2679L24.2501 1.99976H9.65672L7.64085 6.00186L4.85787 6.00677C2.63919 6.0107 0.833062 7.80372 0.831147 10.0049L0.820312 25.9995C0.820312 28.2057 2.62934 30.0007 4.85397 30.0007H29.0549C31.2795 30.0007 33.0885 28.2067 33.0885 26.0005V9.99997C33.0885 7.79389 31.2794 5.9999 29.0549 5.9999ZM16.9539 25.0005C12.5056 25.0005 8.88657 21.4115 8.88657 17.0002C8.88657 12.5889 12.5056 8.99992 16.9539 8.99992C21.4022 8.99992 25.0212 12.5889 25.0212 17.0002C25.0212 21.4115 21.4022 25.0005 16.9539 25.0005Z" fill="#979797"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0">
+                            <rect width="32.2682" height="32" fill="white" transform="translate(0.820312)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+
+                            span Добавить фотографию
+
+                        div.request__photo
+                            input(type="file")
+
+                            <svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                            <path d="M19.8058 14.1716C21.381 15.7338 21.381 18.2665 19.8058 19.8286C18.2305 21.3908 15.6766 21.3908 14.1014 19.8286C12.5261 18.2665 12.5261 15.7338 14.1014 14.1716C15.6766 12.6095 18.2305 12.6095 19.8058 14.1716Z" fill="#979797"/>
+                            <path d="M29.0549 5.9999H26.2679L24.2501 1.99976H9.65672L7.64085 6.00186L4.85787 6.00677C2.63919 6.0107 0.833062 7.80372 0.831147 10.0049L0.820312 25.9995C0.820312 28.2057 2.62934 30.0007 4.85397 30.0007H29.0549C31.2795 30.0007 33.0885 28.2067 33.0885 26.0005V9.99997C33.0885 7.79389 31.2794 5.9999 29.0549 5.9999ZM16.9539 25.0005C12.5056 25.0005 8.88657 21.4115 8.88657 17.0002C8.88657 12.5889 12.5056 8.99992 16.9539 8.99992C21.4022 8.99992 25.0212 12.5889 25.0212 17.0002C25.0212 21.4115 21.4022 25.0005 16.9539 25.0005Z" fill="#979797"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0">
+                            <rect width="32.2682" height="32" fill="white" transform="translate(0.820312)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+
+                            span Добавить фотографию
+
+                        div.request__photo
+                            input(type="file")
+
+                            <svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                            <path d="M19.8058 14.1716C21.381 15.7338 21.381 18.2665 19.8058 19.8286C18.2305 21.3908 15.6766 21.3908 14.1014 19.8286C12.5261 18.2665 12.5261 15.7338 14.1014 14.1716C15.6766 12.6095 18.2305 12.6095 19.8058 14.1716Z" fill="#979797"/>
+                            <path d="M29.0549 5.9999H26.2679L24.2501 1.99976H9.65672L7.64085 6.00186L4.85787 6.00677C2.63919 6.0107 0.833062 7.80372 0.831147 10.0049L0.820312 25.9995C0.820312 28.2057 2.62934 30.0007 4.85397 30.0007H29.0549C31.2795 30.0007 33.0885 28.2067 33.0885 26.0005V9.99997C33.0885 7.79389 31.2794 5.9999 29.0549 5.9999ZM16.9539 25.0005C12.5056 25.0005 8.88657 21.4115 8.88657 17.0002C8.88657 12.5889 12.5056 8.99992 16.9539 8.99992C21.4022 8.99992 25.0212 12.5889 25.0212 17.0002C25.0212 21.4115 21.4022 25.0005 16.9539 25.0005Z" fill="#979797"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0">
+                            <rect width="32.2682" height="32" fill="white" transform="translate(0.820312)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+
+                            span Добавить фотографию
+
+                    p.request__photo-note Максимальный объем файла: 10 МБ. Форматы jpeg, jpg. До 3 фото.
+
+                    p.request__title Видео для оценки
+
+                    div.request__video
+                        input(type="file")
+
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30.3662 8.50183C30.0205 7.21661 29.0072 6.20349 27.7222 5.85742C25.3746 5.21509 15.984 5.21509 15.984 5.21509C15.984 5.21509 6.59381 5.21509 4.24622 5.83307C2.9859 6.17877 1.94788 7.2168 1.60217 8.50183C0.984375 10.8492 0.984375 15.7175 0.984375 15.7175C0.984375 15.7175 0.984375 20.6102 1.60217 22.9331C1.94824 24.2181 2.96118 25.2313 4.2464 25.5773C6.61853 26.2198 15.9844 26.2198 15.9844 26.2198C15.9844 26.2198 25.3746 26.2198 27.7222 25.6019C29.0074 25.256 30.0205 24.2429 30.3666 22.9578C30.9842 20.6102 30.9842 15.7422 30.9842 15.7422C30.9842 15.7422 31.0089 10.8492 30.3662 8.50183ZM12.9943 20.2149V11.22L20.803 15.7175L12.9943 20.2149Z" fill="#979797"/>
+                        </svg>
+
+                        span Загрузите видео
+
+                    button.request__button Отправить
+
+                    p.request__note Отправляя форму, вы соглашаетесь с <br /><a href="">условиями обработки и хранения персональных данных</a>
+
+        // FOOTER
+        include ../components/footer.pug
+
+        // SCRIPTS
+        include ../components/scripts.pug
