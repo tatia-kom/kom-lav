@@ -116,6 +116,20 @@ $(document).ready(function() {
         $('.category-filter-block__color--selected').removeClass('category-filter-block__color--selected');
     });
 
+    $('.category-top-sorting__item').click(function(e) {
+        if ($(this).hasClass('category-top-sorting__item--active')) {
+            if ($(this).hasClass('category-top-sorting__item--down')) {
+                $(this).removeClass('category-top-sorting__item--down').addClass('category-top-sorting__item--up');
+            }
+            else {
+                $(this).removeClass('category-top-sorting__item--active category-top-sorting__item--down category-top-sorting__item--up');
+            }
+        }
+        else {
+            $('.category-top-sorting__item--active').removeClass('category-top-sorting__item--active category-top-sorting__item--down category-top-sorting__item--up');
+            $(this).addClass('category-top-sorting__item--active category-top-sorting__item--down');
+        }
+    });
 
     // item
 
@@ -124,6 +138,8 @@ $(document).ready(function() {
         $(this).hide();
         $('.item-block__characters-item--hidden').removeClass('item-block__characters-item--hidden');
     });
+
+    $('.swipebox').swipebox();
 
     // login
 

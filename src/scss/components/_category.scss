@@ -94,6 +94,10 @@
     line-height: 32px;
     display: block;
 
+    &:hover {
+      color: $primary;
+    }
+
     &--active {
       font-weight: bold;
       color: $primary;

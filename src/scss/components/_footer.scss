@@ -318,6 +318,11 @@
   &__item {
     display: block;
     margin-right: 32px;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.4);
+    }
 
     @media (max-width: $lg) {
       margin-right: 24px;

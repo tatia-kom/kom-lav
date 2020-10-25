@@ -16,6 +16,10 @@
     color: #000000;
     margin: 0 10px;
 
+    &:hover {
+      color: $primary;
+    }
+
     @media (max-width: $xs) {
       margin: 5px 10px;
     }
