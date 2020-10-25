@@ -1,0 +1,40 @@
+div.modal#chooseCity
+    div.modal__content
+        button.modal__close x
+
+        p.modal__title Выберите город
+
+        form.modal__search
+            input(type="text" placeholder="Ваш город")
+            button(type="submit")
+
+        div.modal__list
+            a.modal__city(href="") Москва
+            a.modal__city(href="") Санкт-Петербург
+            a.modal__city(href="") Краснодар
+            a.modal__city(href="") Казань
+            a.modal__city(href="") Самара
+            a.modal__city(href="") Саратов
+            a.modal__city(href="") Челябинск
+            a.modal__city(href="") Екатеринбург
+            a.modal__city(href="") Нижний Новгород
+
+div.modal#modalForm
+    div.modal__content
+        button.modal__close x
+
+        p.modal__title Задайте вопрос по товару
+        p.modal__text Пожалуйста, задайте свой вопрос и мы <br />вам обязательно ответим!*
+
+        form.modal__form
+            input.modal__input(type="text" placeholder="Имя")
+            input.modal__input.tel-input(type="text" placeholder="Телефон")
+            textarea.modal__textarea(placeholder="Введите текст сообщения")
+            button.modal__button.open-modal(data-modal="#modalThanks") Отправить
+
+div.modal#modalThanks
+    div.modal__content
+        button.modal__close x
+
+        p.modal__title Спасибо!
+        p.modal__text Ваша заявка принята.

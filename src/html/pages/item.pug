@@ -125,7 +125,7 @@ html
                             div.item-right__content
                                 p.item-right__title Доставка
                                 p.item-right__text
-                                    a.item-right__link(href="") Выбрать город
+                                    a.item-right__link.open-modal(data-modal="#chooseCity" href="") Выбрать город
                                 p.item-right__text
                                     a.item-right__link(href="") Как работает доставка?
                         div.item-right__block
@@ -151,7 +151,7 @@ html
                             div.item-right__top
                                 p.item-right__name Оплата
 
-                    button.item-right__button Задать вопрос по товару
+                    button.item-right__button.open-modal(data-modal="#modalForm") Задать вопрос по товару
 
             // SIMILAR
             section.item-similar
@@ -206,6 +206,9 @@ html
 
         // FOOTER
         include ../components/footer.pug
+
+        // MODALS
+        include ../components/modals.pug
 
         // SCRIPTS
         include ../components/scripts.pug

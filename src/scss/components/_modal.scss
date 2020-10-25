@@ -1,0 +1,172 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+
+  &--opened {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__content {
+    background: white;
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 450px;
+    flex-shrink: 0;
+    margin: auto;
+    padding: 40px 24px 24px;
+    position: relative;
+  }
+
+  &__close {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: black;
+  }
+
+  &__search {
+    flex-shrink: 0;
+    width: 100%;
+    height: 50px;
+    background: #F2F2F2;
+    border-radius: 30px;
+    display: flex;
+
+    input {
+      border-radius: 30px;
+      padding: 0 24px;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 22px;
+      color: black;
+      flex-grow: 1;
+      border: 0;
+      background: transparent;
+
+      @include placeholderColor(black);
+    }
+
+    button {
+      width: 54px;
+      flex-shrink: 0;
+      height: 100%;
+      margin-right: 4px;
+      cursor: pointer;
+      background: url('../img/search-button.svg') no-repeat center;
+    }
+  }
+
+  &__list {
+    margin-top: 16px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__city {
+    font-size: 18px;
+    line-height: 32px;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    margin-top: 14px;
+    background: #F2F2F2;
+    border-radius: 30px;
+    border: 1px solid #F2F2F2;
+    transition: 0.3s;
+    height: 46px;
+    padding: 0 24px;
+    font-weight: 300;
+    font-size: 18px;
+    color: black;
+
+    @include placeholderColor(black);
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+
+  &__textarea {
+    margin-top: 14px;
+    background: #F2F2F2;
+    border-radius: 30px;
+    border: 1px solid #F2F2F2;
+    transition: 0.3s;
+    height: 164px;
+    padding: 12px 24px;
+    font-weight: 300;
+    font-size: 18px;
+    color: black;
+    resize: none;
+
+    @include placeholderColor(black);
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+
+  &__button {
+    margin-top: 24px;
+    height: 60px;
+    border-radius: 50px;
+    background: $primary;
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background: black;
+    }
+  }
+}

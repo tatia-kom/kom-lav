@@ -216,6 +216,14 @@
         left: 1px;
       }
     }
+
+    &--white {
+      &.category-filter-block__color--selected {
+        &:after {
+          background: url('../img/checkbox-black.svg');
+        }
+      }
+    }
   }
 
   .category-checkbox {

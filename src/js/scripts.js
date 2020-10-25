@@ -38,60 +38,6 @@ $(document).ready(function() {
         $('.header-catalog').slideUp();
     });
 
-    // price range
-
-    $('#priceRange').slider({
-        animate: "fast",
-        range: true,
-        min: parseInt($('#priceRange').attr('data-min')),
-        max: parseInt($('#priceRange').attr('data-max')),
-        step: 100,
-        values: [$('#priceFrom').val(), $('#priceTo').val()],
-        slide: function( event, ui ) {
-            $('#priceFrom').val(ui.values[0]);
-            $('#priceTo').val(ui.values[1]);
-        },
-        change: function( event, ui ) {
-            $('#priceFrom').val(ui.values[0]);
-            $('#priceTo').val(ui.values[1]);
-        }
-    });
-
-    $('#priceFrom').change(function(e) {
-        $('#priceRange').slider('values', [ $('#priceFrom').val(), $('#priceTo').val() ] );
-    });
-
-    $('#priceTo').change(function(e) {
-        $('#priceRange').slider('values', [ $('#priceFrom').val(), $('#priceTo').val() ] );
-    });
-
-    // display range
-
-    $('#displayRange').slider({
-        animate: "fast",
-        range: true,
-        min: parseInt($('#displayRange').attr('data-min')),
-        max: parseInt($('#displayRange').attr('data-max')),
-        step: 1,
-        values: [$('#displayFrom').val(), $('#displayTo').val()],
-        slide: function( event, ui ) {
-            $('#displayFrom').val(ui.values[0]);
-            $('#displayTo').val(ui.values[1]);
-        },
-        change: function( event, ui ) {
-            $('#displayFrom').val(ui.values[0]);
-            $('#displayTo').val(ui.values[1]);
-        }
-    });
-
-    $('#displayFrom').change(function(e) {
-        $('#displayRange').slider('values', [ $('#displayFrom').val(), $('#displayTo').val() ] );
-    });
-
-    $('#displayTo').change(function(e) {
-        $('#displayRange').slider('values', [ $('#displayFrom').val(), $('#displayTo').val() ] );
-    });
-
     // category
 
     $('.category-filter__title').click(function(e) {
@@ -162,7 +108,26 @@ $(document).ready(function() {
         $('.item-block__characters-item--hidden').removeClass('item-block__characters-item--hidden');
     });
 
-    $('.swipebox').swipebox();
+    $('.modal__close').click(function(e) {
+        e.preventDefault();
+        $(this).parents('.modal').removeClass('modal--opened');
+    });
+
+    $('.modal').click(function(e) {
+        e.preventDefault();
+        $(this).removeClass('modal--opened');
+    });
+
+    $('.modal__content').click(function(e) {
+        e.stopPropagation();
+    });
+
+    $('.open-modal').click(function(e) {
+        e.preventDefault();
+        var modal = $(this).attr('data-modal');
+        $('.modal--opened').removeClass('modal--opened');
+        $(modal).addClass('modal--opened');
+    });
 
     // login
 
@@ -187,7 +152,9 @@ $(document).ready(function() {
 
     // map
 
-    ymaps.ready(init);
+    if ($('div').is('#map')) {
+        ymaps.ready(init);
+    }
 
     // lk
 
@@ -195,6 +162,62 @@ $(document).ready(function() {
         if ($(window).width() < 768) {
             $('.lk-menu__links').slideToggle();
         }
+    });
+
+    $('.swipebox').swipebox();
+
+    // price range
+
+    $('#priceRange').slider({
+        animate: "fast",
+        range: true,
+        min: parseInt($('#priceRange').attr('data-min')),
+        max: parseInt($('#priceRange').attr('data-max')),
+        step: 100,
+        values: [$('#priceFrom').val(), $('#priceTo').val()],
+        slide: function( event, ui ) {
+            $('#priceFrom').val(ui.values[0]);
+            $('#priceTo').val(ui.values[1]);
+        },
+        change: function( event, ui ) {
+            $('#priceFrom').val(ui.values[0]);
+            $('#priceTo').val(ui.values[1]);
+        }
+    });
+
+    $('#priceFrom').change(function(e) {
+        $('#priceRange').slider('values', [ $('#priceFrom').val(), $('#priceTo').val() ] );
+    });
+
+    $('#priceTo').change(function(e) {
+        $('#priceRange').slider('values', [ $('#priceFrom').val(), $('#priceTo').val() ] );
+    });
+
+    // display range
+
+    $('#displayRange').slider({
+        animate: "fast",
+        range: true,
+        min: parseInt($('#displayRange').attr('data-min')),
+        max: parseInt($('#displayRange').attr('data-max')),
+        step: 1,
+        values: [$('#displayFrom').val(), $('#displayTo').val()],
+        slide: function( event, ui ) {
+            $('#displayFrom').val(ui.values[0]);
+            $('#displayTo').val(ui.values[1]);
+        },
+        change: function( event, ui ) {
+            $('#displayFrom').val(ui.values[0]);
+            $('#displayTo').val(ui.values[1]);
+        }
+    });
+
+    $('#displayFrom').change(function(e) {
+        $('#displayRange').slider('values', [ $('#displayFrom').val(), $('#displayTo').val() ] );
+    });
+
+    $('#displayTo').change(function(e) {
+        $('#displayRange').slider('values', [ $('#displayFrom').val(), $('#displayTo').val() ] );
     });
 });
 
