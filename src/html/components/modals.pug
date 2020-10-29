@@ -32,6 +32,27 @@ div.modal#modalForm
             textarea.modal__textarea(placeholder="Введите текст сообщения")
             button.modal__button.open-modal(data-modal="#modalThanks") Отправить
 
+        p.modal__note Отправляя форму, вы соглашаетесь с <a href="">условиями обработки и хранения <br />персональных данных</a>
+
+div.modal#modalBook
+    div.modal__content
+        button.modal__close x
+
+        p.modal__title Забронировать товар
+
+        form.modal__form
+            input.modal__input(type="text" placeholder="Имя")
+            input.modal__input.tel-input(type="text" placeholder="Телефон")
+            input.modal__input(type="text" placeholder="E-mail")
+
+            div.modal__book-block
+                p.modal__book-main Бронь на 5 дней. Предоплата 350₽
+                p.modal__book-date до 09:58, 28 октября
+
+            button.modal__button.open-modal(data-modal="#modalThanks") Отправить
+
+        p.modal__note Отправляя форму, вы соглашаетесь с <a href="">условиями обработки и хранения <br />персональных данных</a>
+
 div.modal#modalThanks
     div.modal__content
         button.modal__close x

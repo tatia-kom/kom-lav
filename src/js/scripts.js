@@ -100,6 +100,12 @@ $(document).ready(function() {
         }
     });
 
+    $('.category-top__clear').click(function(e) {
+        e.preventDefault();
+        $('.category-top-sorting__item').removeClass('category-top-sorting__item--active').removeClass('category-top-sorting__item--up').removeClass('category-top-sorting__item--down');
+        $('.category-top__search input').val('');
+    });
+
     // item
 
     $('.item-block__characters-more').click(function(e) {
@@ -127,6 +133,11 @@ $(document).ready(function() {
         var modal = $(this).attr('data-modal');
         $('.modal--opened').removeClass('modal--opened');
         $(modal).addClass('modal--opened');
+    });
+
+    $('.item-block__buy').click(function(e) {
+        e.preventDefault();
+        $(this).find('span').text('Товар в корзине');
     });
 
     // login
@@ -164,7 +175,31 @@ $(document).ready(function() {
         }
     });
 
-    $('.swipebox').swipebox();
+    $('.fancybox').fancybox();
+
+    $('.item-similar__flex').slick({
+        slidesToShow: 4,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
 
     // price range
 

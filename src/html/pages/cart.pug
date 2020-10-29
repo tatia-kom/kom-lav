@@ -30,7 +30,6 @@ html
                             div.cart-item__info
                                 p.cart-item__name Товар
                                 p.cart-item__location Сызрань, проспект 50 лет Октября, 54 (со двора)
-                                a.cart-item__note(href="") Пожелание к видеообзору
                             button.cart-item__delete Удалить
                             p.cart-item__price 12 840.50 ₽
 
@@ -47,6 +46,12 @@ html
                         span.cart__all-sum 12 840.50 ₽
 
                     p.cart__text.cart__text--black Онлайн подтверждение заявки за 2 минуты. Вы можете выбрать срок кредитования и ежемесячный платеж самостоятельно
+
+                    div.cart__checkbox
+                        div.category-checkbox
+                            input.category-checkbox__input#agree(type="checkbox" checked)
+                            label.category-checkbox__label(for="agree") Согласен с <a href="">условиями договора оферты</a>
+
                     button.cart__button Оформить заказ
                     button.cart__button.cart__button--grey Хочу в кредит
 

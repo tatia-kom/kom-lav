@@ -28,15 +28,15 @@ html
                 div.item__left
                     div.item-block
                         div.item-block__left
-                            a.item-block__photo.swipebox(href="img/img-big.jpg")
+                            a.item-block__photo.fancybox(href="img/img-big.jpg" data-fancybox="gallery")
                                 img(src="img/img-big.jpg")
                                 button.item-block__fav
                             div.item-block__photos
-                                a.item-block__preview.swipebox(href="img/img-big.jpg")
+                                a.item-block__preview.fancybox(href="img/img-big.jpg" data-fancybox="gallery")
                                     img(src="img/img-big.jpg")
-                                a.item-block__preview.swipebox(href="img/img-big.jpg")
+                                a.item-block__preview.fancybox(href="img/img-big.jpg" data-fancybox="gallery")
                                     img(src="img/img-big.jpg")
-                                a.item-block__preview.swipebox(href="img/img-big.jpg")
+                                a.item-block__preview.fancybox(href="img/img-big.jpg" data-fancybox="gallery")
                                     img(src="img/img-big.jpg")
                         div.item-block__content
                             div.item-block__top
@@ -72,7 +72,7 @@ html
                                     div.item-block__price 12 840.50 ₽ <span>13 970 ₽</span>
                                     div.item-block__economy Экономия <span>1 970 ₽</span>
                                 div.item-block__bottom-right
-                                    button.item-block__book
+                                    button.item-block__book.open-modal(data-modal="#modalBook")
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0)">
                                             <path d="M7.56044 0C5.2702 0 3.51294 2.06873 3.9057 4.34372C3.95541 4.63156 4.22911 4.82327 4.51503 4.7737C4.80204 4.72412 4.99458 4.45139 4.945 4.16437C4.66417 2.53702 5.91949 1.05469 7.56044 1.05469C9.19644 1.05469 10.4541 2.53001 10.1771 4.15791C10.1282 4.44507 10.3214 4.71739 10.6085 4.76628C10.8956 4.81531 11.1679 4.62195 11.2168 4.33479C11.6023 2.069 9.85342 0 7.56044 0Z" fill="#DB7D43"/>
@@ -86,29 +86,16 @@ html
                                         </svg>
                                         | Забронировать
                                     button.item-block__buy
-                                        <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0)">
-                                            <path d="M10.1129 22.5769C10.9891 22.5769 11.6994 21.7668 11.6994 20.7675C11.6994 19.7683 10.9891 18.9582 10.1129 18.9582C9.23667 18.9582 8.52637 19.7683 8.52637 20.7675C8.52637 21.7668 9.23667 22.5769 10.1129 22.5769Z" fill="white"/>
-                                            <path d="M16.4644 22.5769C17.3406 22.5769 18.0509 21.7668 18.0509 20.7675C18.0509 19.7683 17.3406 18.9582 16.4644 18.9582C15.5882 18.9582 14.8779 19.7683 14.8779 20.7675C14.8779 21.7668 15.5882 22.5769 16.4644 22.5769Z" fill="white"/>
-                                            <path d="M20.6488 5.29559C20.3014 4.89764 19.6175 4.91029 19.6175 4.91029H5.65402L5.19271 2.71567C5.02785 1.92904 4.40981 1.37259 3.69936 1.37259H0L0.716363 3.12542L2.97265 3.11699C3.48497 3.1153 3.9278 3.5259 4.03204 4.09921L6.08945 15.3927C6.33046 16.7181 7.35362 17.6708 8.54017 17.6708C11.4936 17.6708 16.7114 17.6708 17.603 17.6708C18.8576 17.6708 18.9352 16.0942 18.9352 16.0942C18.9352 16.0942 11.5697 16.0942 8.94603 16.0942C8.43001 16.0942 7.82676 16.1759 7.44382 14.4796C7.30187 13.8515 6.96994 11.9452 6.96994 11.9452L19.4793 11.9267C20.0293 11.9047 20.4973 11.4301 20.5601 10.7868L20.9874 6.34863C21.0251 5.94057 20.9978 5.69101 20.6488 5.29559ZM19.1732 10.1494H6.63504L6.02883 6.92195H19.4808L19.1732 10.1494Z" fill="white"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0">
-                                            <rect width="21" height="23.9494" fill="white"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                        | Купить
+                                        img(src="img/buy-icon.svg")
+                                        span Купить
                                 p.item-block__note *При оформлении заказа можно добавить поздравительную открытку***
 
                     div.item__description
-                        p.item__desc-title Проверка
                         p.item__desc-text Проверяйте товар на работоспособность в филиале. Уточняйте у продавца возможность протестировать товар в течение 5 дней на наличие неисправностей.
-
-                        p.item__desc-title Купить Apple iPhone 8 64GB в Сызрани
-                        p.item__desc-text Продажа Apple iPhone 8 64GB по выгодной цене. Стоимость товара в Сызрани можно уточнить у консультанта в любом магазине нашей сети.
-
-                        a.item__link(href="") Сотовые телефоны
+                        p.item__desc-text Проверяйте товар на работоспособность в филиале. Уточняйте у продавца возможность протестировать товар в течение 5 дней на наличие неисправностей.
+                        p.item__desc-text Проверяйте товар на работоспособность в филиале. Уточняйте у продавца возможность протестировать товар в течение 5 дней на наличие неисправностей.
+                        p.item__desc-text Проверяйте товар на работоспособность в филиале. Уточняйте у продавца возможность протестировать товар в течение 5 дней на наличие неисправностей.
+                        p.item__desc-text Проверяйте товар на работоспособность в филиале. Уточняйте у продавца возможность протестировать товар в течение 5 дней на наличие неисправностей.
 
                 // RIGHT PANEL
                 div.item-right
@@ -119,6 +106,10 @@ html
                             div.item-right__content
                                 p.item-right__title Кэшбэк
                                 p.item-right__text 925Б с покупки этого товара
+
+                            div.item-right__info
+                               span i
+                               div "Бонусные баллы" - кэшбэк с покупок товаров. Вы можете оплатитьдо 100% покупки бонусными баллами.
                         div.item-right__block.item-right__block--light
                             div.item-right__icon
                                 img(src="img/item-right-icon2.svg")
@@ -143,64 +134,85 @@ html
                             div.item-right__content2
                                 p.item-right__info завтра 06.09.2020 с 9:00 в течение 3-х часов.
 
-                        div.item-right__block2
-                            div.item-right__top
-                                p.item-right__name Бонусы 3%
-
-                        div.item-right__block2
-                            div.item-right__top
-                                p.item-right__name Оплата
-
                     button.item-right__button.open-modal(data-modal="#modalForm") Задать вопрос по товару
 
             // SIMILAR
             section.item-similar
                 h3.item-similar__title Похожие товары
                 div.item-similar__flex
-                    a.category-item(href="")
+                    div.category-item
                         div.category-item__img-wrap
-                            div.category-item__img
-                                img(src="img/img.jpg")
-                        div.category-item__content
-                            p.category-item__name Apple iPhone 11 64GB
-                            p.category-item__city Москва
-                            div.category-item__bottom
-                                span.category-item__more Подробнее
-                                div.category-item__price 82 840 ₽
-                                    span.category-item__old 93 970 ₽
-                    a.category-item(href="")
-                        div.category-item__img-wrap
-                            div.category-item__img
-                                img(src="img/img.jpg")
-                        div.category-item__content
-                            p.category-item__name Apple iPhone 11 64GB
-                            p.category-item__city Москва
-                            div.category-item__bottom
-                                span.category-item__more Подробнее
-                                div.category-item__price 82 840 ₽
-                                    span.category-item__old 93 970 ₽
-                    a.category-item(href="")
-                        div.category-item__img-wrap
-                            div.category-item__img
+                            a.category-item__img(href="")
                                 img(src="img/img.jpg")
                                 span.category-item__label Выгода сейчас
                         div.category-item__content
-                            p.category-item__name Apple iPhone 11 64GB
+                            a.category-item__name(href="") Apple iPhone 11 64GB
                             p.category-item__city Москва
                             div.category-item__bottom
-                                span.category-item__more Подробнее
+                                a.category-item__more(href="") Подробнее
                                 div.category-item__price 82 840 ₽
                                     span.category-item__old 93 970 ₽
-                    a.category-item(href="")
+                    div.category-item
                         div.category-item__img-wrap
-                            div.category-item__img
+                            a.category-item__img(href="")
                                 img(src="img/img.jpg")
                                 span.category-item__label Выгода сейчас
                         div.category-item__content
-                            p.category-item__name Apple iPhone 11 64GB
+                            a.category-item__name(href="") Apple iPhone 11 64GB
                             p.category-item__city Москва
                             div.category-item__bottom
-                                span.category-item__more Подробнее
+                                a.category-item__more(href="") Подробнее
+                                div.category-item__price 82 840 ₽
+                                    span.category-item__old 93 970 ₽
+                    div.category-item
+                        div.category-item__img-wrap
+                            a.category-item__img(href="")
+                                img(src="img/img.jpg")
+                                span.category-item__label Выгода сейчас
+                        div.category-item__content
+                            a.category-item__name(href="") Apple iPhone 11 64GB
+                            p.category-item__city Москва
+                            div.category-item__bottom
+                                a.category-item__more(href="") Подробнее
+                                div.category-item__price 82 840 ₽
+                                    span.category-item__old 93 970 ₽
+                                    span.category-item__old 93 970 ₽
+                    div.category-item
+                        div.category-item__img-wrap
+                            a.category-item__img(href="")
+                                img(src="img/img.jpg")
+                                span.category-item__label Выгода сейчас
+                        div.category-item__content
+                            a.category-item__name(href="") Apple iPhone 11 64GB
+                            p.category-item__city Москва
+                            div.category-item__bottom
+                                a.category-item__more(href="") Подробнее
+                                div.category-item__price 82 840 ₽
+                                    span.category-item__old 93 970 ₽
+
+                    div.category-item
+                        div.category-item__img-wrap
+                            a.category-item__img(href="")
+                                img(src="img/img.jpg")
+                                span.category-item__label Выгода сейчас
+                        div.category-item__content
+                            a.category-item__name(href="") Apple iPhone 11 64GB
+                            p.category-item__city Москва
+                            div.category-item__bottom
+                                a.category-item__more(href="") Подробнее
+                                div.category-item__price 82 840 ₽
+                                    span.category-item__old 93 970 ₽
+                                    span.category-item__old 93 970 ₽
+                    div.category-item
+                        div.category-item__img-wrap
+                            a.category-item__img(href="")
+                                img(src="img/img.jpg")
+                                span.category-item__label Выгода сейчас
+                        div.category-item__content
+                            a.category-item__name(href="") Apple iPhone 11 64GB
+                            p.category-item__city Москва
+                            div.category-item__bottom
+                                a.category-item__more(href="") Подробнее
                                 div.category-item__price 82 840 ₽
                                     span.category-item__old 93 970 ₽
 

@@ -230,6 +230,7 @@
     margin-right: 26px;
     position: relative;
     cursor: pointer;
+    padding-right: 17px;
 
     @media (max-width: $xs) {
       margin-right: 0;
@@ -241,7 +242,6 @@
     }
 
     &--down {
-      padding-right: 17px;
 
       &:after {
         content: '';
@@ -256,7 +256,6 @@
     }
 
     &--up {
-      padding-right: 17px;
 
       &:after {
         content: '';

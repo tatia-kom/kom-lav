@@ -170,6 +170,23 @@
       background: #BDBDBD;
     }
   }
+
+  &__checkbox {
+    margin-top: 20px;
+
+    .category-checkbox__label {
+      justify-content: flex-start;
+    }
+
+    a {
+      color: $primary;
+      margin-left: 6px;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
 }
 
 .cart-item {

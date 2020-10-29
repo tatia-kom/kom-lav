@@ -67,3 +67,14 @@
     }
   }
 }
+
+.pagination-count {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (max-width: $xs) {
+    margin-top: 20px;
+  }
+}

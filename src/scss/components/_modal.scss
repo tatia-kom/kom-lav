@@ -169,4 +169,35 @@
       background: black;
     }
   }
+
+  &__note {
+    text-align: center;
+    margin-top: 20px;
+
+    a {
+      color: $primary;
+      display: block;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+
+  &__book-block {
+    margin-top: 20px;
+  }
+
+  &__book-main {
+    font-weight: bold;
+    text-align: center;
+    color: $primary;
+    font-size: 18px;
+  }
+
+  &__book-date {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+  }
 }
