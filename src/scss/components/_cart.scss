@@ -11,8 +11,19 @@
     flex-grow: 1;
   }
 
-  &__content {
+  &__left {
     flex-grow: 1;
+
+    .cart__items {
+      margin-top: 16px;
+    }
+
+    .cart-item__price {
+      margin-left: auto;
+    }
+  }
+
+  &__content {
     background: #FFFFFF;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     padding: 24px 16px;

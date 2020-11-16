@@ -111,4 +111,12 @@ footer {
             margin-top: 20px;
         }
     }
+
+    &--top60 {
+        margin-top: 60px;
+
+        @media (max-width: $xs) {
+            margin-top: 40px;
+        }
+    }
 }
