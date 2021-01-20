@@ -1,0 +1,138 @@
+.top-banner {
+  background: linear-gradient(92.94deg, #F3F3F3 7.18%, #CDCDCD 79.4%);
+  overflow: hidden;
+
+  .container {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $sm) {
+      align-items: flex-start;
+    }
+
+    @media (max-width: $xs) {
+      align-items: center;
+      flex-direction: column-reverse;
+      height: auto;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: -150px;
+
+    @media (max-width: $lg) {
+      right: -250px;
+    }
+
+    @media (max-width: $sm) {
+      max-width: 500px;
+      right: -150px;
+    }
+
+    @media (max-width: $xs) {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      margin-top: 30px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    @media (max-width: $md) {
+      max-width: 500px;
+    }
+
+    @media (max-width: $sm) {
+      margin-top: 50px;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 30px;
+      max-width: 100%;
+    }
+  }
+
+  &__conditions {
+    font-family: $font;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__gift {
+    margin-top: 16px;
+    font-family: $font;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    color: black;
+
+    @media (max-width: $xs) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__date {
+    margin-top: 16px;
+    font-family: $font;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    span {
+      font-size: 24px;
+      line-height: 29px;
+      color: $primary;
+
+      @media (max-width: $xs) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 53px;
+    background: $primary;
+    border-radius: 50px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+    cursor: pointer;
+    width: 270px;
+    height: 60px;
+
+    @media (max-width: $xs) {
+      margin-top: 30px;
+    }
+
+    &:hover {
+      background: black;
+    }
+  }
+}
